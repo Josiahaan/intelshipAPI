@@ -3,12 +3,11 @@ const { Sms } = require("../models/index");
 class SmsController {
   static async callbackSms(req, res, next) {
     try {
-      const { username, mobile, message, type } = req.body
+      const { sender, content, idsms } = req.params
       const obj = {
-        username,
-        mobile,
-        message,
-        type
+        mobile : sender,
+        message : content,
+        trxID : idsms,
       }
       await Sms.create(obj);
       res.status(201).json({message: "Success!"})
