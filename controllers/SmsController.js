@@ -4,14 +4,13 @@ class SmsController {
   static async callbackSms(req, res, next) {
     try {
       const { sender: mobile, content: message, idsms: trxID } = req.params;
-      // const test = req.params;
       const obj = {
         mobile,
         message,
         trxID,
       }
       await Sms.create(obj);
-      res.status(201).json(obj)
+      res.status(201).json({obj})
     } catch (err) {
       next(err);
     }
