@@ -10,7 +10,7 @@ class SmsController {
         trxID,
       }
       let newData = await Sms.create(obj);
-      res.status(201).json(req.params)
+      res.status(201).json(mobile, message, trxID)
     } catch (err) {
       next(err);
     }
