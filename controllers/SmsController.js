@@ -3,14 +3,15 @@ const { Sms } = require("../models/index");
 class SmsController {
   static async callbackSms(req, res, next) {
     try {
-      const { sender: mobile, content: message, idsms: trxID } = req.params;
+      const { sender: mobile, content: message, idsms } = req.query;
+      let randomId = `TRX-ID-${mobile}-${idsms}`
       const obj = {
         mobile,
         message,
-        trxID,
+        trxID: randomId,
       }
-      await Sms.create(obj);
-      res.status(201).json({obj})
+      let newData = await Sms.create(obj);
+      res.status(201).json(newData)
     } catch (err) {
       next(err);
     }
