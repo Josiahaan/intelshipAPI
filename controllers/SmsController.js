@@ -11,7 +11,7 @@ class SmsController {
         trxID,
       }
       await Sms.create(obj);
-      res.status(201).json({test})
+      res.status(201).json(test)
     } catch (err) {
       next(err);
     }
