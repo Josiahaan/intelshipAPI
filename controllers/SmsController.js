@@ -9,7 +9,7 @@ class SmsController {
         mobile,
         message,
         trxID: randomId,
-        type: "receive sms",
+        type: "Receive Sms",
       }
       let newData = await Sms.create(obj);
       res.status(201).json(newData)
