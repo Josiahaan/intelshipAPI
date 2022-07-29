@@ -9,8 +9,8 @@ class SmsController {
         message,
         trxID,
       }
-      await Sms.create(obj);
-      res.status(201).json({message: "Success!"})
+      let newData = await Sms.create(obj);
+      res.status(201).json(newData)
     } catch (err) {
       next(err);
     }
