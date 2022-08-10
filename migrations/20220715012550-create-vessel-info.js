@@ -9,28 +9,79 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       imei: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
-      gpsEarly: {
-        type: Sequelize.DATE
+      deviceId: {
+        type: Sequelize.STRING
       },
-      gpsLastest: {
-        type: Sequelize.DATE
+      statusPower: {
+        type: Sequelize.FLOAT
       },
-      averageFuel: {
-        type: Sequelize.INTEGER
+      statusSignal: {
+        type: Sequelize.FLOAT
       },
-      rpmLeftH: {
-        type: Sequelize.INTEGER
+      fuelTank1: {
+        type: Sequelize.FLOAT
       },
-      rpmLeftM: {
-        type: Sequelize.INTEGER
+      fuelTank2: {
+        type: Sequelize.FLOAT
       },
-      rpmRightH: {
-        type: Sequelize.INTEGER
+      fuelTank3: {
+        type: Sequelize.FLOAT
       },
-      rpmRightM: {
-        type: Sequelize.INTEGER
+      fuelTank4: {
+        type: Sequelize.FLOAT
+      },
+      fuelTank5: {
+        type: Sequelize.FLOAT
+      },
+      fuelTank6: {
+        type: Sequelize.FLOAT
+      },
+      fuelTank7: {
+        type: Sequelize.FLOAT
+      },
+      fuelTank8: {
+        type: Sequelize.FLOAT
+      },
+      RPM1: {
+        type: Sequelize.FLOAT
+      },
+      RPM2: {
+        type: Sequelize.FLOAT
+      },
+      date: {
+        type: Sequelize.FLOAT
+      },
+      time: {
+        type: Sequelize.FLOAT
+      },
+      latitude: {
+        type: Sequelize.FLOAT
+      },
+      NSIndicator: {
+        type: Sequelize.STRING
+      },
+      longitude: {
+        type: Sequelize.FLOAT
+      },
+      EWIndicator: {
+        type: Sequelize.STRING
+      },
+      speed: {
+        type: Sequelize.FLOAT
+      },
+      pitch: {
+        type: Sequelize.FLOAT
+      },
+      roll: {
+        type: Sequelize.FLOAT
+      },
+      DFM1: {
+        type: Sequelize.FLOAT
+      },
+      DFM2: {
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,
