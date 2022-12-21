@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       imei: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       name: {
         type: Sequelize.STRING
@@ -20,38 +20,38 @@ module.exports = {
       username: {
         type: Sequelize.STRING
       },
-      fueltank1: {
-        type: Sequelize.STRING
+      fuelTank1: {
+        type: Sequelize.FLOAT
       },
       fuelTank2: {
-        type: Sequelize.STRING
+        type: Sequelize.FLOAT
       },
       fuelTank3: {
-        type: Sequelize.STRING
+        type: Sequelize.FLOAT
       },
       fuelTank4: {
-        type: Sequelize.STRING
+        type: Sequelize.FLOAT
       },
       fuelTank5: {
-        type: Sequelize.STRING
+        type: Sequelize.FLOAT
       },
       fuelTank6: {
-        type: Sequelize.STRING
+        type: Sequelize.FLOAT
       },
       fuelTank7: {
-        type: Sequelize.STRING
+        type: Sequelize.FLOAT
       },
       fuelTank8: {
-        type: Sequelize.STRING
+        type: Sequelize.FLOAT
       },
       rpm: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       rpmLeft: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       rpmRight: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,

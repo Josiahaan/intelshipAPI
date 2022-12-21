@@ -14,18 +14,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Vessel.init({
-    imei: DataTypes.INTEGER,
+    imei: DataTypes.STRING,
     name: DataTypes.STRING,
     productionYear: DataTypes.INTEGER,
     username: DataTypes.STRING,
-    fueltank1: DataTypes.STRING,
-    fuelTank2: DataTypes.STRING,
-    fuelTank3: DataTypes.STRING,
-    fuelTank4: DataTypes.STRING,
-    fuelTank5: DataTypes.STRING,
-    fuelTank6: DataTypes.STRING,
-    fuelTank7: DataTypes.STRING,
-    fuelTank8: DataTypes.STRING,
+    fuelTank1: DataTypes.FLOAT,
+    fuelTank2: DataTypes.FLOAT,
+    fuelTank3: DataTypes.FLOAT,
+    fuelTank4: DataTypes.FLOAT,
+    fuelTank5: DataTypes.FLOAT,
+    fuelTank6: DataTypes.FLOAT,
+    fuelTank7: DataTypes.FLOAT,
+    fuelTank8: DataTypes.FLOAT,
     rpm: DataTypes.INTEGER,
     rpmLeft: DataTypes.INTEGER,
     rpmRight: DataTypes.INTEGER

@@ -12,6 +12,7 @@ class SmsController {
         type: "Receive Sms",
       }
       await Sms.create(obj);
+      // console.log(obj)
       let newData2 = await message.split(",")
      let vesselData =  await VesselInfo.create({
       imei: sender,

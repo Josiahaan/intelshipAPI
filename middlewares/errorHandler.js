@@ -24,24 +24,12 @@ function errorHandler(err, req, res, next) {
       code = 401;
       break;
     case "Forbidden":
-      msg = "You are not authorized";
+      msg = "Forbidden";
       code = 403;
       break;
     case "Not found":
       msg = "Data not found";
       code = 404;
-      break;
-    case "Collection not found":
-      msg = "Collection not found";
-      code = 404;
-      break;
-    case "transaction not found":
-      msg = "transaction not found";
-      code = 404;
-      break;
-    case "transaction already settle":
-      msg = "transaction already settle";
-      code = 403;
       break;
   }
 
