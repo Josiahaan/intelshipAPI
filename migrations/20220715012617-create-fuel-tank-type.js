@@ -9,12 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       type: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       sounding: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       capacity: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
