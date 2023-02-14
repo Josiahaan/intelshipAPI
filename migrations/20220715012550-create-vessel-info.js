@@ -9,7 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       imei: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        references: {
+          model: {
+            tableName: "Vessels",
+          },
+          key: "imei",
+        },
+        onDelete: "cascade",
+        onUpdate: "cascade",
       },
       deviceId: {
         type: Sequelize.STRING

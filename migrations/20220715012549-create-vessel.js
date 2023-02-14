@@ -10,6 +10,7 @@ module.exports = {
       },
       imei: {
         allowNull: false,
+        unique: true,
         type: Sequelize.STRING
       },
       name: {
@@ -24,48 +25,76 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      deviceId: {
+        type: Sequelize.STRING
+      },
+      statusPower: {
+        type: Sequelize.FLOAT
+      },
+      statusSignal: {
+        type: Sequelize.FLOAT
+      },
       fuelTank1: {
-        allowNull: false,
         type: Sequelize.FLOAT
       },
       fuelTank2: {
-        allowNull: false,
         type: Sequelize.FLOAT
       },
       fuelTank3: {
-        allowNull: false,
         type: Sequelize.FLOAT
       },
       fuelTank4: {
-        allowNull: false,
         type: Sequelize.FLOAT
       },
       fuelTank5: {
-        allowNull: false,
         type: Sequelize.FLOAT
       },
       fuelTank6: {
-        allowNull: false,
         type: Sequelize.FLOAT
       },
       fuelTank7: {
-        allowNull: false,
         type: Sequelize.FLOAT
       },
       fuelTank8: {
-        allowNull: false,
         type: Sequelize.FLOAT
       },
-      rpm: {
-        allowNull: false,
+      RPM1: {
         type: Sequelize.FLOAT
       },
-      rpmLeft: {
-        allowNull: false,
+      RPM2: {
         type: Sequelize.FLOAT
       },
-      rpmRight: {
-        allowNull: false,
+      date: {
+        type: Sequelize.FLOAT
+      },
+      time: {
+        type: Sequelize.FLOAT
+      },
+      latitude: {
+        type: Sequelize.FLOAT
+      },
+      NSIndicator: {
+        type: Sequelize.STRING
+      },
+      longitude: {
+        type: Sequelize.FLOAT
+      },
+      EWIndicator: {
+        type: Sequelize.STRING
+      },
+      speed: {
+        type: Sequelize.FLOAT
+      },
+      pitch: {
+        type: Sequelize.FLOAT
+      },
+      roll: {
+        type: Sequelize.FLOAT
+      },
+      DFM1: {
+        type: Sequelize.FLOAT
+      },
+      DFM2: {
         type: Sequelize.FLOAT
       },
       createdAt: {

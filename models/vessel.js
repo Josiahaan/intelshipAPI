@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Vessel.hasMany(models.VesselInfo, { sourceKey: 'imei', foreignKey: 'imei' })
     }
   }
   Vessel.init({
@@ -18,6 +19,9 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     productionYear: DataTypes.INTEGER,
     username: DataTypes.STRING,
+    deviceId: DataTypes.STRING,
+    statusPower: DataTypes.FLOAT,
+    statusSignal: DataTypes.FLOAT,
     fuelTank1: DataTypes.FLOAT,
     fuelTank2: DataTypes.FLOAT,
     fuelTank3: DataTypes.FLOAT,
@@ -26,9 +30,19 @@ module.exports = (sequelize, DataTypes) => {
     fuelTank6: DataTypes.FLOAT,
     fuelTank7: DataTypes.FLOAT,
     fuelTank8: DataTypes.FLOAT,
-    rpm: DataTypes.INTEGER,
-    rpmLeft: DataTypes.INTEGER,
-    rpmRight: DataTypes.INTEGER
+    RPM1: DataTypes.FLOAT,
+    RPM2: DataTypes.FLOAT,
+    date: DataTypes.FLOAT,
+    time: DataTypes.FLOAT,
+    latitude: DataTypes.FLOAT,
+    NSIndicator: DataTypes.STRING,
+    longitude: DataTypes.FLOAT,
+    EWIndicator: DataTypes.STRING,
+    speed: DataTypes.FLOAT,
+    pitch: DataTypes.FLOAT,
+    roll: DataTypes.FLOAT,
+    DFM1: DataTypes.FLOAT,
+    DFM2: DataTypes.FLOAT,
   }, {
     sequelize,
     modelName: 'Vessel',

@@ -23,7 +23,13 @@ class VesselController {
 
   static async getVesselName(req, res, next) {
     try {
-      const vesselName = await Vessel.findAll();
+      const vesselName = await Vessel.findAll({
+        include: [
+          {
+            model: VesselInfo,
+          },
+        ],
+      });
       res.status(200).json(vesselName);
     } catch (err) {
       next(err);
@@ -42,23 +48,12 @@ class VesselController {
 
   static async addVessel(req, res, next) {
     try {
-      const { imei, name, productionYear, username, fuelTank1, fuelTank2, fuelTank3, fuelTank4, fuelTank5, fuelTank6, fuelTank7, fuelTank8, rpm, rpmLeft, rpmRight } = req.body;
+      const { imei, name, productionYear, username } = req.body;
       const vessel = await Vessel.create({
         imei,
         name,
         productionYear,
         username,
-        fuelTank1,
-        fuelTank2,
-        fuelTank3,
-        fuelTank4,
-        fuelTank5,
-        fuelTank6,
-        fuelTank7,
-        fuelTank8,
-        rpm,
-        rpmLeft,
-        rpmRight,
       });
       console.log(vessel)
       res
@@ -73,6 +68,18 @@ class VesselController {
   static vesselById(req, res) {
       let { id } = req.params;
       Vessel.findByPk(id)
+      .then((data) => {
+        res.status(200).json(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(404).json({ message: `${id} not found` });
+      });
+    }
+
+    static vesselInfoById(req, res) {
+      let { id } = req.params;
+      VesselInfo.findByPk(id)
       .then((data) => {
         res.status(200).json(data);
       })
@@ -105,22 +112,12 @@ class VesselController {
           message: `vessel id ${req.params.id} not found`,
         };
       } else {
-        let { imei, name, productionYear, username, fuelTank1, fuelTank2, fuelTank3, fuelTank4 , fuelTank5, fuelTank6, fuelTank7, fuelTank8, rpmLeft, rpmRight } = req.body;
+        let { imei, name, productionYear, username } = req.body;
         let update = await Vessel.update({   
           imei,
           name,
           productionYear,
           username,
-          fuelTank1,
-          fuelTank2,
-          fuelTank3,
-          fuelTank4,
-          fuelTank5,
-          fuelTank6,
-          fuelTank7,
-          fuelTank8,
-          rpmLeft,
-          rpmRight,
           },
           {
             where: {

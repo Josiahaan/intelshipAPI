@@ -11,10 +11,28 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      VesselInfo.belongsTo(models.Vessel, { targetKey: 'imei', foreignKey: 'imei' })
     }
   }
   VesselInfo.init({
-    imei: DataTypes.STRING,
+    imei: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull:{
+          msg: "imei is required"
+        },
+        notEmpty: {
+          msg: "imei is required"
+        },
+      },
+      references: {
+        model: {
+          tableName: "Vessels"
+        },
+        key: "imei"
+      },
+    },
     deviceId: DataTypes.STRING,
     statusPower: DataTypes.FLOAT,
     statusSignal: DataTypes.FLOAT,
