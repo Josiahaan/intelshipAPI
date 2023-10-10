@@ -65,7 +65,11 @@ class VesselController {
 
   static vesselById(req, res) {
     let { id } = req.params;
-    Vessel.findByPk(id)
+    Vessel.findByPk(id, {include: [
+      {
+        model: VesselInfo,
+      },
+    ],})
       .then((data) => {
         res.status(200).json(data);
       })
