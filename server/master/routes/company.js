@@ -5,6 +5,7 @@ const CompanyController = require("../controllers/CompanyController")
 
 router.post('/', CompanyController.addCompany)
 router.get('/', CompanyController.getCompany)
+router.get('/:id', CompanyController.companyById)
 router.delete('/:id', CompanyController.deleteCompany)
 router.put('/:id', CompanyController.editCompany)
 

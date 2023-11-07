@@ -20,6 +20,18 @@ class CompanyController {
     }
   }
 
+  static async companyById(req, res) {
+    let { id } = req.params;
+    Company.findByPk(id)
+      .then((companyById) => {
+        res.status(200).json(companyById);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(404).json({ message: `${id} not found` });
+      });
+  }
+
   static async getCompany(req, res, next) {
     try {
       const company = await Company.findAll({

@@ -114,13 +114,14 @@ class VesselController {
           message: `vessel id ${req.params.id} not found`,
         };
       } else {
-        let { imei, name, productionYear, companyName } = req.body;
+        let { imei, name, productionYear, companyName, phoneNumber } = req.body;
         let update = await Vessel.update(
           {
             imei,
             name,
             productionYear,
             companyName,
+            phoneNumber
           },
           {
             where: {

@@ -29,28 +29,100 @@ module.exports = {
       statusSignal: {
         type: Sequelize.FLOAT
       },
-      fuelTank1: {
+      v0Tank1: {
         type: Sequelize.FLOAT
       },
-      fuelTank2: {
+      v0Tank2: {
         type: Sequelize.FLOAT
       },
-      fuelTank3: {
+      v0Tank3: {
         type: Sequelize.FLOAT
       },
-      fuelTank4: {
+      v0Tank4: {
         type: Sequelize.FLOAT
       },
-      fuelTank5: {
+      v0Tank5: {
         type: Sequelize.FLOAT
       },
-      fuelTank6: {
+      v0Tank6: {
         type: Sequelize.FLOAT
       },
-      fuelTank7: {
+      v0Tank7: {
         type: Sequelize.FLOAT
       },
-      fuelTank8: {
+      v0Tank8: {
+        type: Sequelize.FLOAT
+      },
+      v2Tank1: {
+        type: Sequelize.FLOAT
+      },
+      v2Tank2: {
+        type: Sequelize.FLOAT
+      },
+      v2Tank3: {
+        type: Sequelize.FLOAT
+      },
+      v2Tank4: {
+        type: Sequelize.FLOAT
+      },
+      v2Tank5: {
+        type: Sequelize.FLOAT
+      },
+      v2Tank6: {
+        type: Sequelize.FLOAT
+      },
+      v2Tank7: {
+        type: Sequelize.FLOAT
+      },
+      v2Tank8: {
+        type: Sequelize.FLOAT
+      },
+      h0Tank1: {
+        type: Sequelize.FLOAT
+      },
+      h0Tank2: {
+        type: Sequelize.FLOAT
+      },
+      h0Tank3: {
+        type: Sequelize.FLOAT
+      },
+      h0Tank4: {
+        type: Sequelize.FLOAT
+      },
+      h0Tank5: {
+        type: Sequelize.FLOAT
+      },
+      h0Tank6: {
+        type: Sequelize.FLOAT
+      },
+      h0Tank7: {
+        type: Sequelize.FLOAT
+      },
+      h0Tank8: {
+        type: Sequelize.FLOAT
+      },
+      h2Tank1: {
+        type: Sequelize.FLOAT
+      },
+      h2Tank2: {
+        type: Sequelize.FLOAT
+      },
+      h2Tank3: {
+        type: Sequelize.FLOAT
+      },
+      h2Tank4: {
+        type: Sequelize.FLOAT
+      },
+      h2Tank5: {
+        type: Sequelize.FLOAT
+      },
+      h2Tank6: {
+        type: Sequelize.FLOAT
+      },
+      h2Tank7: {
+        type: Sequelize.FLOAT
+      },
+      h2Tank8: {
         type: Sequelize.FLOAT
       },
       RPM1: {
@@ -77,7 +149,10 @@ module.exports = {
       EWIndicator: {
         type: Sequelize.STRING
       },
-      speed: {
+      speed0: {
+        type: Sequelize.FLOAT
+      },
+      speed2: {
         type: Sequelize.FLOAT
       },
       pitch: {

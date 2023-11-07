@@ -3,7 +3,7 @@ const VesselController = require("../controllers/VesselController")
 
 router.get('/', VesselController.getVesselName)
 router.post('/', VesselController.addVessel)
-router.get('/client', VesselController.getVesselByCompanyName)
+router.post('/client', VesselController.getVesselByCompanyName)
 router.get('/info',VesselController.getVesselInfo)
 router.get('/:id', VesselController.vesselById)
 router.put('/:id', VesselController.editVesselById)

@@ -29,6 +29,9 @@ module.exports = {
       deviceId: {
         type: Sequelize.STRING
       },
+      vesselId: {
+        type: Sequelize.INTEGER
+      },
       statusPower: {
         type: Sequelize.FLOAT
       },
